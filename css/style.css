@@ -38,13 +38,13 @@ ul li.checked::before {
   border-radius: 5rem;
 }
 
-button {
-  border-radius: 5rem !important;
-  margin-left: 15px;
+form {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.list-group-item {
-  margin-top: 10px;
+form button {
+  border-radius: 5rem !important;
 }
 
 .btn .btn-outline-danger {
