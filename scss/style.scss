@@ -28,3 +28,23 @@ ul li.checked::before {
   background-color: #f44336;
   color: white;
 }
+
+.container-fluid {
+  max-width: 512px;
+}
+
+.form-control {
+  border-radius: 5rem;
+}
+
+button {
+  border-radius: 5rem !important;
+  margin-left: 15px;
+}
+.list-group-item {
+  margin-top: 10px;
+}
+
+.btn .btn-outline-danger {
+  padding: 0px;
+}

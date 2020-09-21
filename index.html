@@ -17,12 +17,14 @@
     <main>
         <div class="container-fluid">
             <div class="container">
-                <form action="">
-                    <input id="search" type="text" class="form-control" placeholder="Add items">
+                <form class="needs-validation" novalidate>
+                    <div class="d-flex">
+                        <input id="search" type="text" class="form-control" placeholder="Add items" required>
+                        <button type="submit" class="btn btn-warning">+</button>
+                    </div>
                 </form>
-
                 <ul class="list-group" id="myUl">
-                    <div class="input-group d-flex">
+                    <!-- <div class="input-group d-flex">
                         <li class="list-group-item pl-5 flex-grow-1">Cras justo odio</li>
                         <div class="input-group-append">
                             <button class="btn btn-outline-danger" type="button">x</button>
@@ -33,26 +35,7 @@
                         <div class="input-group-append">
                             <button class="btn btn-outline-danger" type="button">x</button>
                         </div>
-                    </div>
-
-                    <div class="input-group d-flex">
-                        <li class="list-group-item pl-5 flex-grow-1">Morbi leo risus</li>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-danger" type="button">x</button>
-                        </div>
-                    </div>
-                    <div class="input-group d-flex">
-                        <li class="list-group-item pl-5 flex-grow-1">Porta ac consectetur ac</li>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-danger" type="button">x</button>
-                        </div>
-                    </div>
-                    <div class="input-group d-flex">
-                        <li class="list-group-item pl-5 flex-grow-1 checked">Vestibulum at eros</li>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-danger" type="button">x</button>
-                        </div>
-                    </div>
+                    </div> -->
                 </ul>
             </div>
         </div>

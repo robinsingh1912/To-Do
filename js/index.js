@@ -1,22 +1,8 @@
-var close = $("button");
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function () {
-    var div = this.parentElement.parentElement;
-    console.log(div);
-    $(div).remove();
-  };
-}
-
-$(".d-flex").click((ev) => {
-  if (ev.target.tagName === "LI") {
-    ev.target.classList.toggle("checked");
-  }
-});
-
 $("form").submit((e) => {
   e.preventDefault();
   console.log($("#search").val());
   const value = $("#search").val();
+
   if (!value) return;
 
   $("#myUl").prepend(` <div class="input-group d-flex">
@@ -25,21 +11,22 @@ $("form").submit((e) => {
       <button class="btn btn-outline-danger" type="button">x</button>
   </div>
 </div>`);
-
-  close = $("button");
+  const close = $(".btn-outline-danger");
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
       var div = this.parentElement.parentElement;
-      console.log(div);
       $(div).remove();
     };
   }
 
-  $(".d-flex").click((ev) => {
-    if (ev.target.tagName === "LI") {
-      ev.target.classList.toggle("checked");
-    }
-  });
-
+  $(".d-flex")
+    .unbind()
+    .click((ev) => {
+      if (ev.target.nodeName === "LI") {
+        console.log(ev);
+        ev.target.classList.toggle("checked");
+      }
+    });
   $("form").trigger("reset");
+  //$("#search").val("");
 });
